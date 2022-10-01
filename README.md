@@ -8,5 +8,9 @@ python manage.py makemigrations
 python manage.py sqlmigrate news 0001
 python manage.py migrate
 
-
+>>> news2 = News(title='Новость 2', content = 'Контент новости 2' )
+>>> news2.save()
+from django.db import connection
+connection.queries
+News.objects.create(title = 'Новость 3', content = 'Контент новости 3') 
 
